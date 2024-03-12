@@ -1,10 +1,7 @@
 'use strict';
-
-// Math.random gives decimal no. so we use math.trunc for integer
 let secretNum = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
-//document.querySelector('.number').textContent = secretNum;
 
 const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
@@ -19,7 +16,6 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.number').textContent = secretNum;
     document.querySelector('.score').textContent = score;
     displayMessage('Correct Number !!!');
-    // body is not a class. So no need to put '.' before 'body'
     document.querySelector('body').style.backgroundColor = 'green';
     document.querySelector('.number').style.width = '30rem';
     if (score > highscore) {
